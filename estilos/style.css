@@ -1,0 +1,94 @@
+*{
+	box-sizing: border-box;
+}
+@font-face{
+	font-family: "Bebas";
+	src:url("../fuentes/BEBAS.ttf");
+}
+#fullpage{
+	position:fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/web.jpg");
+	background-size:cover;
+	overflow: auto;
+}
+.overlay-dark::before{
+	background-image: url("../img/overlay-dark.png");
+	opacity:0.5;
+	content:"";
+	left:0;
+	top:0;
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+.wrapper{
+	width: 1200px;
+	height: auto;
+	text-align: center;
+	position:relative;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+	font-family: "Bebas";
+	padding-top: 20px;
+}
+.wrapper p{
+	font-size: 27px;
+	color:white;
+	line-height: 33px;
+	word-spacing: 4px;
+}
+.box_img img{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	width: 190px;
+	height: 190px;
+}
+.ver_b{
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	padding:10px 70px;
+	color:#231F20;
+	background:white;
+	margin:0 10px;
+	transition:all 0.4s linear;
+	word-spacing: 5px;
+}
+.ver_b:hover{
+	color:white;
+	background:#231F20;
+	box-shadow: inset 0 0 0 3px white;
+}
+.box_pdf{
+	position:fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+@media(max-width: 1119px){
+	.wrapper{
+		width: 100%;
+	}
+	.wrapper p{
+		margin:0 5px;
+	}
+
+@media(max-height:400px){
+	.wrapper{
+		padding-top:100px;
+	}
+	.overlay-dark::before{
+		background-repeat: repeat-y;
+	}
+}
+}
